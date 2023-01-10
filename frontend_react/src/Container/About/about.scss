@@ -1,0 +1,55 @@
+.app__about-head-text {
+  padding: 1rem 6rem;
+  text-align: center;
+
+  @media screen and (max-width: 426px) {
+    padding: 1rem 2rem;
+  }
+
+  @media screen and (max-width: 769px) {
+    padding: 1rem 4rem;
+  }
+  @media screen and (max-width: 350px) {
+    padding: 1rem 2rem;
+    gap: 1rem 0;
+  }
+}
+.app__profiles {
+  padding: 2rem 6rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 426px) {
+    padding: 1rem 2rem;
+    gap: 1rem 0;
+  }
+
+  @media screen and (max-width: 769px) {
+    padding: 2rem 2rem;
+    gap: 1rem 0;
+  }
+  @media screen and (max-width: 350px) {
+    padding: 1rem 1rem;
+    gap: 1rem 0;
+  }
+
+  .app__profile-item {
+    width: 22%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (max-width: 769px) {
+      width: 40%;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 20px;
+    }
+    .p-text {
+      font-size: 10px;
+    }
+  }
+}
