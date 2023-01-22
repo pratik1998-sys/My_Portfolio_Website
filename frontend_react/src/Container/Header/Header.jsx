@@ -27,13 +27,13 @@ const Header = () => {
           <div className='badge-cmp app__flex'>
             <span>👋</span>
             <div style={{ marginLeft: 20 }}>
-              <p className='p-text1'>Hello, I am</p>
+              <p className='p-text'>Hello, I am</p>
               <h1 className='head-text'>Pratik</h1>
             </div>
           </div>
           <div className='tag-cmp app__flex'>
-            <p className='p-text2'>Web Developer</p>
-            <p className='p-text2'>Freelancer </p>
+            <p className='p-text'>Web Developer</p>
+            <p className='p-text'>Freelancer </p>
           </div>
         </div>
       </motion.div>
@@ -42,11 +42,12 @@ const Header = () => {
         transition={{ duaration: 0.5, delayChildren: 0.5 }}
         className='app__header-img'
       >
-        <img src={images.profile} alt='' />
+        <img src={images.profile} alt='profile' className='profile-img' />
         <motion.img
           whileInView={{ scale: [0, 1] }}
           transition={{ duaration: 1, ease: 'easeInOut' }}
           src={images.circle}
+          alt='overlay_circle'
           className='overlay_circle'
         />
       </motion.div>

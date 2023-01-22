@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { AppWrap } from '../../wrapper'
+import { AppWrap, MotionWrap } from '../../wrapper'
 import { urlFor, client } from '../../client'
 import { Tooltip as ReactTooltip } from 'react-tooltip'
 import './skills.scss'
@@ -24,12 +24,12 @@ const Skills = () => {
       <h2 className='head-text'>Skills & Experince</h2>
       <div className='app__skills-container'>
         <motion.div className='app__skills-list'>
-          {skills.map((skill) => (
+          {skills.map((skill, index) => (
             <motion.div
               whileInView={{ opacity: [0, 1] }}
               transition={{ duration: 0.5 }}
               className='app__skills-item app__flex'
-              key={skill.name}
+              key={skill.name + index}
             >
               <div
                 className='app__flex'
@@ -51,7 +51,7 @@ const Skills = () => {
                 <p className='bold-text'>{experience.year}</p>
               </div>
               <div className='app__skills-exp-works'>
-                {experience.works.map((work) => (
+                {experience.works.map((work, index) => (
                   <div>
                     <motion.div
                       whileInView={{ opacity: [0, 1] }}
@@ -59,7 +59,7 @@ const Skills = () => {
                       className='app__skills-exp-work'
                       data-tip
                       data-for={work.name}
-                      key={work.name}
+                      key={work.name + index}
                     >
                       <h4 className='bold-text'>{work.name}</h4>
                       <p className='p-text'>{work.company}</p>
@@ -83,4 +83,8 @@ const Skills = () => {
   )
 }
 
-export default AppWrap(Skills, 'skills')
+export default AppWrap(
+  MotionWrap(Skills, 'app_skills'),
+  'skills',
+  'app__whitebg'
+)

@@ -12,12 +12,14 @@ const Navbar = () => {
         <img src={images.logo} alt='logo' />
       </div>
       <ul className='app__navbar-links'>
-        {['home', 'about', 'contact', 'work', 'skills'].map((item) => (
-          <li className='app__flex' key={`link-${item}`}>
-            <div />
-            <a href={`#${item}`}>{item}</a>
-          </li>
-        ))}
+        {['home', 'about', 'work', 'skills', 'testimonial', 'contact'].map(
+          (item) => (
+            <li className='app__flex' key={`link-${item}`}>
+              <div />
+              <a href={`#${item}`}>{item}</a>
+            </li>
+          )
+        )}
       </ul>
       <div className='app__navbar-menu'>
         <HiMenuAlt4 onClick={() => setToggle(true)} />
@@ -31,7 +33,14 @@ const Navbar = () => {
               onClick={() => setToggle(false)}
             />
             <ul>
-              {['home', 'about', 'contact', 'work', 'skills'].map((item) => (
+              {[
+                'home',
+                'about',
+                'work',
+                'skills',
+                'testimonial',
+                'contact',
+              ].map((item) => (
                 <li key={`${item}`}>
                   <a href={`#${item}`} onClick={() => setToggle(false)}>
                     {item}
