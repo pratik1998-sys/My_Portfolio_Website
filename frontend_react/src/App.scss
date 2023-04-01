@@ -32,7 +32,7 @@
   padding: 4rem 2rem;
 
   @media screen and (max-width: 450px) {
-    padding: 4rem 1rem 2rem;
+    padding: 2rem 1rem;
   }
 }
 
@@ -65,9 +65,12 @@
   @media screen and (min-width: 2000px) {
     font-size: 4rem;
   }
+  @media screen and (min-width: 1200px) and (max-width: 2000px) {
+    font-size: 3rem;
+  }
 
   @media screen and (max-width: 450px) {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -183,6 +186,17 @@
   }
 
   .copyright {
-    padding: 2rem;
+    padding: 1.5rem;
+    .p-text {
+      font-size: 12px;
+    }
+  }
+}
+@media screen and (max-width: 426px) {
+  .copyright {
+    padding: 0.5rem;
+    .p-text {
+      font-size: 8px;
+    }
   }
 }

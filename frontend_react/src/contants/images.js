@@ -34,6 +34,9 @@ import bolt from '../assets/bolt.png'
 import nb from '../assets/nb.png'
 import skype from '../assets/skype.png'
 import spotify from '../assets/spotify.png'
+import logo1 from '../assets/pratik-logo-1.png'
+import logo2 from '../assets/pratik-logo-2.png'
+import logo3 from '../assets/pratik-logo-3.png'
 
 export default {
   email,
@@ -69,4 +72,7 @@ export default {
   nb,
   skype,
   spotify,
+  logo1,
+  logo2,
+  logo3,
 }

@@ -14,7 +14,7 @@ const About = () => {
 
   return (
     <>
-      <h2 className='app__about-head-text'>
+      <h2 className='app__about head-text'>
         I know that
         <span> Good Design </span>
         means
@@ -30,9 +30,7 @@ const About = () => {
             key={about.title + index}
           >
             <img src={urlFor(about.imgUrl)} alt={about.title} />
-            <h2 className='bold-text' style={{ marginTop: 20 }}>
-              {about.title}
-            </h2>
+            <h2 className='bold-text'>{about.title}</h2>
             <p className='p-text' style={{ marginTop: 10 }}>
               {about.description}
             </p>

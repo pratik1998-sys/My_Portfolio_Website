@@ -5,12 +5,20 @@
   align-items: center;
   padding: 1rem 2rem;
   background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.18);
   position: fixed;
   z-index: 2;
+
+  @media screen and (min-width: 2000px) {
+    padding: 2rem 2rem;
+  }
+  @media screen and (max-width: 426px) {
+    padding: 0.5rem 2rem;
+  }
 }
+/**
 .app__navbar-logo {
   display: flex;
   justify-content: flex-start;
@@ -20,15 +28,24 @@
     height: 20px;
   }
 }
+**/
 .app__navbar-links {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (min-width: 2000px) {
+    gap: 0 2rem;
+  }
+
   li {
     margin: 0 1rem;
     cursor: pointer;
     flex-direction: column;
+
+    @media screen and (min-width: 2000px) {
+      font-size: 30px;
+    }
     div {
       width: 5px;
       height: 5px;
@@ -110,6 +127,7 @@
 
       li {
         margin: 1rem;
+        font-size: 14px;
 
         a {
           color: var(--gray-color);

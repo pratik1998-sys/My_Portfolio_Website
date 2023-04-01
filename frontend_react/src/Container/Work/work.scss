@@ -10,8 +10,13 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-
-  margin: 4rem 0 2rem;
+  margin: 1rem 2rem;
+  @media screen and (max-width: 426px) {
+    margin: 1rem 1rem;
+  }
+  @media screen and (min-width: 1200px) {
+    margin: 2rem 2rem;
+  }
 
   .app__work-filter-item {
     padding: 0.5rem 1rem;
@@ -28,6 +33,12 @@
       color: white;
     }
 
+    @media screen and (max-width: 426px) {
+      margin: 0.5rem 0.5rem;
+    }
+    @media screen and (min-width: 426px) and (max-width: 800px) {
+      margin: 0.5rem 0.5rem;
+    }
     @media screen and (min-width: 2000px) {
       padding: 1rem 2rem;
       border-radius: 0.85rem;
@@ -42,12 +53,14 @@
 
 .app__work-portfolio {
   display: flex;
+  width: 100%;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 
   .app__work-item {
-    width: 270px;
+    width: 250px;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -65,19 +78,24 @@
       box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
     }
     @media screen and (min-width: 2000px) {
-      width: 470px;
-      padding: 1.25rem;
-      border-radius: 0.5rem;
+      width: 450px;
+      height: auto;
+      padding: 1.5rem;
+      border-radius: 1rem;
     }
-
-    @media screen and (max-width: 300px) {
+    @media screen and (min-width: 426px) and (max-width: 1000px) {
+      width: 210px;
+      height: auto;
+      margin: 1rem;
+    }
+    @media screen and (max-width: 320px) {
       width: 100%;
       margin: 1rem;
     }
 
     .app__work-item-img {
       width: 100%;
-      height: 230px;
+      height: auto;
       position: relative;
 
       img {
