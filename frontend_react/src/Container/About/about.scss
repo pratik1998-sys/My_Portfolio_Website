@@ -1,5 +1,6 @@
-.app__about-head-text {
-  padding: 1rem 6rem;
+.app__about {
+  flex: 1;
+  padding: 1rem 2rem;
   text-align: center;
 
   @media screen and (max-width: 350px) {
@@ -22,7 +23,7 @@
   }
 }
 .app__profiles {
-  padding: 2rem 4rem;
+  padding: 2rem 2rem;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -37,6 +38,11 @@
   }
   @media screen and (max-width: 426px) {
     padding: 1rem 0;
+    gap: 1rem 0;
+  }
+  @media screen and (min-width: 2000px) {
+    padding: 2rem 4rem;
+    margin-top: 2rem;
     gap: 1rem 0;
   }
 
@@ -60,15 +66,6 @@
     h2 {
       @media screen and (max-width: 426px) {
         margin-top: 10px;
-      }
-    }
-    .p-text {
-      font-size: 10px;
-      @media screen and (min-width: 1200px) {
-        font-size: 16px;
-      }
-      @media screen and (min-width: 2000px) {
-        font-size: 22px;
       }
     }
   }

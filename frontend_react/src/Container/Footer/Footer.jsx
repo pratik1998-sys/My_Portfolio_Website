@@ -36,60 +36,62 @@ const Footer = () => {
   return (
     <div className='app__footer'>
       <h2 className='head-text'>Take a Coffee and chat with Me</h2>
-      <div className='app__footer-cards'>
-        <div className='app__footer-card'>
-          <img src={images.email} alt='email' />
-          <a href='mailto:pratiksingh260@gmail.com' className='p-text'>
-            pratiksingh260@gmail.com
-          </a>
+      <div className='app__footer-container'>
+        <div className='app__footer-cards'>
+          <div className='app__footer-card'>
+            <img src={images.email} alt='email' />
+            <a href='mailto:pratiksingh260@gmail.com' className='p-text'>
+              pratiksingh260@gmail.com
+            </a>
+          </div>
+          <div className='app__footer-card'>
+            <img src={images.mobile} alt='mobile' />
+            <a href='tel: +91 7488400841'>+91 7488400841</a>
+          </div>
         </div>
-        <div className='app__footer-card'>
-          <img src={images.mobile} alt='mobile' />
-          <a href='tel: +91 7488400841'>+91 7488400841</a>
-        </div>
+        {!isFormSubmitted ? (
+          <div className='app__footer-form app__flex'>
+            <div className='app__flex'>
+              <input
+                className='p-text'
+                placeholder='Your Name'
+                value={name}
+                onChange={(event) => changeHandler(event)}
+                type='text'
+                name='name'
+                id='name'
+              />
+            </div>
+            <div className='app__flex'>
+              <input
+                className='p-text'
+                placeholder='Your Email'
+                value={email}
+                onChange={(event) => changeHandler(event)}
+                type='email'
+                name='email'
+                id='email'
+              />
+            </div>
+            <div className='p-text'>
+              <textarea
+                type='text'
+                placeholder='Your message'
+                value={message}
+                name='message'
+                onChange={(event) => changeHandler(event)}
+              />
+            </div>
+            <button className='p-text' onClick={() => handleSubmit()}>
+              {loading ? 'Sending..' : 'Send Message'}
+            </button>
+          </div>
+        ) : (
+          <div className='app__footer-thank-msg'>
+            <h3 className='head-text'>Thanks for getting in touch!</h3>
+          </div>
+        )}
       </div>
-      {!isFormSubmitted ? (
-        <div className='app__footer-form app__flex'>
-          <div className='app__flex'>
-            <input
-              className='p-text'
-              placeholder='Your Name'
-              value={name}
-              onChange={(event) => changeHandler(event)}
-              type='text'
-              name='name'
-              id='name'
-            />
-          </div>
-          <div className='app__flex'>
-            <input
-              className='p-text'
-              placeholder='Your Email'
-              value={email}
-              onChange={(event) => changeHandler(event)}
-              type='email'
-              name='email'
-              id='email'
-            />
-          </div>
-          <div className='p-text'>
-            <textarea
-              type='text'
-              placeholder='Your message'
-              value={message}
-              name='message'
-              onChange={(event) => changeHandler(event)}
-            />
-          </div>
-          <button className='p-text' onClick={() => handleSubmit()}>
-            {loading ? 'Sending..' : 'Send Message'}
-          </button>
-        </div>
-      ) : (
-        <div className='app__footer-thank-msg'>
-          <h3 className='head-text'>Thanks for getting in touch!</h3>
-        </div>
-      )}
     </div>
   )
 }
@@ -97,5 +99,5 @@ const Footer = () => {
 export default AppWrap(
   MotionWrap(Footer, 'app_footer'),
   'contact',
-  'app__whitebg'
+  'app__primarybg'
 )

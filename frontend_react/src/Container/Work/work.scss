@@ -1,6 +1,7 @@
 .app__works {
   flex: 1;
   width: 100%;
+  height: auto;
   flex-direction: column;
 }
 
@@ -150,7 +151,7 @@
   flex-direction: column;
   position: relative;
 
-  h4 {
+  h2 {
     margin-top: 1rem;
     line-height: 1.5;
   }
