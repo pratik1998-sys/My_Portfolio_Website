@@ -53,8 +53,8 @@
         background-color: var(--lightGray-color);
 
         @media screen and (min-width: 1400px) {
-          width: 140px;
-          height: 140px;
+          width: 100px;
+          height: 100px;
         }
 
         @media screen and (min-width: 500px) and (max-width: 1000px) {
@@ -64,6 +64,10 @@
         @media screen and (max-width: 500px) {
           width: 55px;
           height: 55px;
+        }
+        @media screen and (min-width: 2000px) {
+          width: 140px;
+          height: 140px;
         }
 
         img {

@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import './navbar.scss'
-import { images } from '../../contants'
 import { HiMenuAlt4, HiX } from 'react-icons/hi'
-import { motion } from 'framer-motion'
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false)
@@ -14,7 +12,6 @@ const Navbar = () => {
       <ul className='app__navbar-links'>
         {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
           <li className='app__flex' key={`link-${item}`}>
-            <div />
             <a href={`#${item}`}>{item}</a>
           </li>
         ))}
@@ -22,10 +19,7 @@ const Navbar = () => {
       <div className='app__navbar-menu'>
         <HiMenuAlt4 onClick={() => setToggle(true)} />
         {toggle && (
-          <motion.div
-            whileInView={{ x: [300, 0], opacity: [0.5, 1] }}
-            transition={{ duration: 0.81, ease: 'easeOut' }}
-          >
+          <div>
             <HiX
               className='app__navbar-menu-close'
               onClick={() => setToggle(false)}
@@ -39,7 +33,7 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
         )}
       </div>
     </nav>
