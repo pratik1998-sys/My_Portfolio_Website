@@ -61,6 +61,7 @@
 
   .app__work-item {
     width: 250px;
+    min-height: 280px;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -96,7 +97,7 @@
 
     .app__work-item-img {
       width: 100%;
-      height: auto;
+      height: 100px;
       position: relative;
 
       img {
